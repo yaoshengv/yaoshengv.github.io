@@ -1,0 +1,168 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  margin: 0;
+  padding: auto;
+  overflow-x: hidden;
+  background-color: rgb(170, 190, 250);
+}
+
+@font-face {
+  font-family: pixel;
+  src: url(image/pixel.ttf);
+}
+
+:root {
+  font-family: pixel;
+  color: white;
+}
+
+.zero {
+  background: linear-gradient(black 65%, rgb(170, 190, 250));
+}
+
+.background {
+  background-image: url("image/637106.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 110vh;
+  font: 900 25rem "";
+  line-height: 100vh;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.menu {
+  display: flex;
+  position: fixed;
+  bottom: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.menu [class^="chaolianjie"]:hover {
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  color: white;
+  animation: gradient 8s infinite;
+}
+
+.menu [class^="chaolianjie"] {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.2);
+  margin: 5px;
+  padding: 1px 20px;
+  border: 3px solid rgba(0, 0, 0, 0.2);
+  border-radius: 20px 20px 20px 20px;
+  font-size: 20px;
+}
+
+.background::before {
+  content: "";
+  background-size: cover;
+  background-image: inherit;
+  background-position: 50% 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -99;
+}
+
+[class^="Textbox"] {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.6);
+  text-indent: 2em;
+  margin: 70px 60px 30px 60px;
+  padding: 40px;
+  background-color: darkcyan;
+  align-items: center;
+  font-size: 20px;
+  justify-content: space-evenly;
+  display: flex;
+  border-radius: 50px 50px 50px 50px;
+}
+
+.Headline {
+  margin: 50px auto;
+  background-color: seagreen;
+  width: 300px;
+  height: 50px;
+  border-radius: 30px 30px 30px 30px;
+  box-shadow: 0 0 0 inset, 0 0 50px #5939db;
+  animation: floatly 2s infinite;
+}
+.Headline_text {
+  font-size: 40px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.li_title {
+  line-height: auto;
+  text-align: center;
+}
+.li_title a {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  border-radius: 50px 50px 50px 50px;
+  box-shadow: 1px 1px 5px 5px rgba(26, 102, 85, 0.3);
+  padding: 5px 40%;
+}
+
+.li_title a:hover {
+  background-color: seagreen;
+}
+
+.list {
+  margin: auto auto 30px auto;
+  font-size: 15px;
+  line-height: 40px;
+  font-style: italic;
+  color: skyblue;
+}
+
+[class^="picture"] {
+  text-align: center;
+  display: flex;
+}
+
+.PictureBox {
+  border-radius: 50px 50px 50px 50px;
+  margin: auto 30px auto auto;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  background-color: darkcyan;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+  animation: floatly 1.5s infinite;
+  text-indent: 0;
+}
+
+.Textbox4 .PictureBox {
+  width: 130vh;
+}
+
+@keyframes gradient {
+  100% {
+    background-position: -400% 0;
+  }
+}
+
+@keyframes floatly {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
